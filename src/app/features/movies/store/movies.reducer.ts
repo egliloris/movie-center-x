@@ -2,7 +2,7 @@ import { createReducer, on } from '@ngrx/store';
 import { Movie } from '../movies.models';
 import * as Actions from './movies.actions';
 
-export const MOVIES_STATE = 'movies';
+export const MOVIES_STATE = 'movies-state';
 
 export interface MoviesState {
   selectedId: number | undefined;
@@ -26,4 +26,6 @@ export const moviesReducer = createReducer(
     movies: movies,
   })),
   on(Actions.loadMoviesFailure, (state) => ({ ...state, movies: [] }))
+  // TODO: Add the vote increment reducer.
+  // You may use the updateMovieVoteCount function from movies.helpers.ts
 );

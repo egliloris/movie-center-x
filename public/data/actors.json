@@ -8,7 +8,7 @@
     "popularity": 8.501,
     "gender": 2,
     "knownForDepartment": "Sound",
-    "profilePath": "/g2C3Fb4fHCU2gnqUcwTQCv5EZc4.jpg"
+    "profilePath": "https://image.tmdb.org/t/p/w400/g2C3Fb4fHCU2gnqUcwTQCv5EZc4.jpg"
   },
   {
     "id": 138781,
@@ -19,7 +19,7 @@
     "popularity": 60.639,
     "gender": 2,
     "knownForDepartment": "Directing",
-    "profilePath": "/bZimaGzpcAvWlnX4UAStzkivWFx.jpg"
+    "profilePath": "https://image.tmdb.org/t/p/w400/bZimaGzpcAvWlnX4UAStzkivWFx.jpg"
   },
   {
     "id": 5602,
@@ -30,7 +30,7 @@
     "popularity": 83.321,
     "gender": 2,
     "knownForDepartment": "Directing",
-    "profilePath": "/wwBzRDoIW6Ld64h6OkQ6ImCZKsR.jpg"
+    "profilePath": "https://image.tmdb.org/t/p/w400/wwBzRDoIW6Ld64h6OkQ6ImCZKsR.jpg"
   },
   {
     "id": 5009810,
@@ -41,7 +41,7 @@
     "popularity": 5.883,
     "gender": 1,
     "knownForDepartment": "Acting",
-    "profilePath": "/5mH6mkgwFZmeYTJpxVTaqbF3uIn.jpg"
+    "profilePath": "https://image.tmdb.org/t/p/w400/5mH6mkgwFZmeYTJpxVTaqbF3uIn.jpg"
   },
   {
     "id": 1027099,
@@ -63,7 +63,7 @@
     "popularity": 8.577,
     "gender": 1,
     "knownForDepartment": null,
-    "profilePath": "/pDVfME2z2DiosnHFBALHvoSvqs5.jpg"
+    "profilePath": "https://image.tmdb.org/t/p/w400/pDVfME2z2DiosnHFBALHvoSvqs5.jpg"
   },
   {
     "id": 12835,
@@ -74,7 +74,7 @@
     "popularity": 91.685,
     "gender": 2,
     "knownForDepartment": "Acting",
-    "profilePath": "/nZdVry7lnUkE24PnXakok9okvL4.jpg"
+    "profilePath": "https://image.tmdb.org/t/p/w400/nZdVry7lnUkE24PnXakok9okvL4.jpg"
   },
   {
     "id": 3416,
@@ -85,7 +85,7 @@
     "popularity": 64.233,
     "gender": 1,
     "knownForDepartment": "Acting",
-    "profilePath": "/gPgZSodybMFBodw7nKRTALONIr2.jpg"
+    "profilePath": "https://image.tmdb.org/t/p/w400/gPgZSodybMFBodw7nKRTALONIr2.jpg"
   },
   {
     "id": 1384838,
@@ -96,7 +96,7 @@
     "popularity": 1.114,
     "gender": 1,
     "knownForDepartment": "Acting",
-    "profilePath": "/h7po7TuRDSaPue0Wylcss1ugToO.jpg"
+    "profilePath": "https://image.tmdb.org/t/p/w400/h7po7TuRDSaPue0Wylcss1ugToO.jpg"
   },
   {
     "id": 366,
@@ -107,7 +107,7 @@
     "popularity": 13.919,
     "gender": 2,
     "knownForDepartment": "Directing",
-    "profilePath": "/pk0GDjn99crNwR4qgCCEokDYd71.jpg"
+    "profilePath": "https://image.tmdb.org/t/p/w400/pk0GDjn99crNwR4qgCCEokDYd71.jpg"
   },
   {
     "id": 3904236,
@@ -118,7 +118,7 @@
     "popularity": 19.327,
     "gender": 1,
     "knownForDepartment": "Acting",
-    "profilePath": "/aB5zZ1O0O7GZPCki7wQv6PxHEMo.jpg"
+    "profilePath": "https://image.tmdb.org/t/p/w400/aB5zZ1O0O7GZPCki7wQv6PxHEMo.jpg"
   },
   {
     "id": 87335,
@@ -129,7 +129,7 @@
     "popularity": 13.455,
     "gender": 1,
     "knownForDepartment": "Acting",
-    "profilePath": "/dkxdADNwbM7ZLQK5YBNeKBqVJNM.jpg"
+    "profilePath": "https://image.tmdb.org/t/p/w400/dkxdADNwbM7ZLQK5YBNeKBqVJNM.jpg"
   },
   {
     "id": 60898,
@@ -140,7 +140,7 @@
     "popularity": 56.863,
     "gender": 2,
     "knownForDepartment": "Acting",
-    "profilePath": "/nKZgixTbHFXpkzzIpMFdLX98GYh.jpg"
+    "profilePath": "https://image.tmdb.org/t/p/w400/nKZgixTbHFXpkzzIpMFdLX98GYh.jpg"
   },
   {
     "id": 4430,
@@ -151,7 +151,7 @@
     "popularity": 38.432,
     "gender": 1,
     "knownForDepartment": "Acting",
-    "profilePath": "/eg8DKQGLJrIA1Yjee0y7K5K6QWq.jpg"
+    "profilePath": "https://image.tmdb.org/t/p/w400/eg8DKQGLJrIA1Yjee0y7K5K6QWq.jpg"
   },
   {
     "id": 1622390,
@@ -162,7 +162,7 @@
     "popularity": 22.846,
     "gender": 1,
     "knownForDepartment": "Acting",
-    "profilePath": "/7wMyr6F3yzvbSpu2XMxSW3vObED.jpg"
+    "profilePath": "https://image.tmdb.org/t/p/w400/7wMyr6F3yzvbSpu2XMxSW3vObED.jpg"
   },
   {
     "id": 74752,
@@ -173,7 +173,7 @@
     "popularity": 3.217,
     "gender": 2,
     "knownForDepartment": "Directing",
-    "profilePath": "/79JljyWnfjqE87UyTo7xgFQa5fy.jpg"
+    "profilePath": "https://image.tmdb.org/t/p/w400/79JljyWnfjqE87UyTo7xgFQa5fy.jpg"
   },
   {
     "id": 4857772,
@@ -184,7 +184,7 @@
     "popularity": 44.714,
     "gender": 1,
     "knownForDepartment": "Acting",
-    "profilePath": "/51Nbexh5jSbUi6QX5Hw26te31Xm.jpg"
+    "profilePath": "https://image.tmdb.org/t/p/w400/51Nbexh5jSbUi6QX5Hw26te31Xm.jpg"
   },
   {
     "id": 1590797,
@@ -195,7 +195,7 @@
     "popularity": 55.482,
     "gender": 1,
     "knownForDepartment": "Acting",
-    "profilePath": "/vo5x9GRs2vT47LNb1HZvKUEsk8C.jpg"
+    "profilePath": "https://image.tmdb.org/t/p/w400/vo5x9GRs2vT47LNb1HZvKUEsk8C.jpg"
   },
   {
     "id": 2472212,
@@ -206,7 +206,7 @@
     "popularity": 12.568,
     "gender": 1,
     "knownForDepartment": "Acting",
-    "profilePath": "/mM43mwxU8YAbRFJPFEwoFYV0CQO.jpg"
+    "profilePath": "https://image.tmdb.org/t/p/w400/mM43mwxU8YAbRFJPFEwoFYV0CQO.jpg"
   },
   {
     "id": 118415,
@@ -217,6 +217,6 @@
     "popularity": 21.169,
     "gender": 2,
     "knownForDepartment": "Directing",
-    "profilePath": "/wKfNgfRvPhLHMrwuweSwLOmhRzT.jpg"
+    "profilePath": "https://image.tmdb.org/t/p/w400/wKfNgfRvPhLHMrwuweSwLOmhRzT.jpg"
   }
 ]

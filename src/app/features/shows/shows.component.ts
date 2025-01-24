@@ -7,4 +7,7 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
   styleUrl: './shows.component.scss',
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class ShowsComponent {}
+export class ShowsComponent {
+  // TODO: Load all shows.
+  // TODO: Make sure you have one smart component and N dumb components.
+}

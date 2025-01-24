@@ -8,6 +8,8 @@ export const setSelectedId = createAction(
 
 export const clearSelectedId = createAction('[Movies] clear selected id');
 
+// TODO: Add a vote increment action.
+
 export const loadMovies = createAction('[Movies] load');
 export const loadMoviesSuccess = createAction(
   '[Movies] load success',

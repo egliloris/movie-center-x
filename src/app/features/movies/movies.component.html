@@ -1,3 +1,4 @@
-@for (movie of movies$ | async; track movie.id) {
-<div>{{ movie.title}} </div>
-}
+<h1>Movies</h1>
+
+<app-movie-list [movies]="movies$ | async" (detailsClick)="selectMovie($event)"
+  (voteClick)="increaseVote($event)"></app-movie-list>
