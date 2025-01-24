@@ -10,7 +10,6 @@ import {
   MatBottomSheet,
   MatBottomSheetModule,
 } from '@angular/material/bottom-sheet';
-import { MatButtonModule } from '@angular/material/button';
 import { Store } from '@ngrx/store';
 import { filter, Subject, switchMap, takeUntil } from 'rxjs';
 import { MovieBottomSheetComponent } from './components/movie-bottom-sheet/movie-bottom-sheet.component';
@@ -25,12 +24,7 @@ import {
 
 @Component({
   selector: 'app-movies',
-  imports: [
-    AsyncPipe,
-    MovieListComponent,
-    MatBottomSheetModule,
-    MatButtonModule,
-  ],
+  imports: [AsyncPipe, MovieListComponent, MatBottomSheetModule],
   templateUrl: './movies.component.html',
   styleUrl: './movies.component.scss',
   changeDetection: ChangeDetectionStrategy.OnPush,
