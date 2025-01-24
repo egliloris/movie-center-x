@@ -4,9 +4,11 @@
   <span class="spacer"></span>
 
   <nav>
-    <button type="button" mat-button>Movies</button>
-    <button type="button" mat-button>Shows</button>
-    <button type="button" mat-button>Actors</button>
+    @for (item of navItems; track item.name) {
+    <button type="button" mat-button [routerLink]="item.routerLink">
+      {{ item.name }}
+    </button>
+    }
   </nav>
 </mat-toolbar>
 
