@@ -10,21 +10,22 @@ This project is a template to learn [NgRx](https://ngrx.io/)
 ## TODO's
 
 ### Basics - Movies
+
 - [ ] Run the application and inspect the redux dev tools.
 - [ ] Checkout the [Movies](http://localhost:4200/movies) tab. Whats the difference between viewing the movies details vs. the random vote average display.
 - [ ] Implement the like button to increase the movie vote count.
 
 ### Advanced - Shows
 
-Try to implement the [Shows](http://localhost:4200/shows) tab on your own. The basic architecture has been done and simply awaits your input. 
+Try to implement the [Shows](http://localhost:4200/shows) tab on your own. The basic architecture has been done and simply awaits your input.
 
 Here is a small checklist which might help you on your way:
 
-- [ ] Load actions implemented
-- [ ] Load effect implemented
-- [ ] Load success and failure reducer implemented
-- [ ] Load on init dispatched
-- [ ] Select all selector implemented
+- [ ] Load actions implemented.
+- [ ] Load effect implemented.
+- [ ] Load success and failure reducer implemented.
+- [ ] Load on init dispatched.
+- [ ] Select all selector implemented.
 
 What else can you try?
 
@@ -43,12 +44,9 @@ Here is a small checklist which might help you on your way:
 - [ ] Die you provide the effects to the application?
 - [ ] Have you added an useful initial state?
 
-
 What else can you try?
 
-- [ ] Open a bottom sheet or dialo using effects only.
-- [ ] 
-
+- [ ] Open a bottom sheet or dialog using effects only.
 
 ## Development server
 
