@@ -1,16 +1,16 @@
-<mat-toolbar color="primary">
-  <span>{{ title$ | async }}</span>
+<header>
+  <mat-toolbar color="primary" class="toolbar">
+    <span class="home" routerLink="/">{{ title$ | async }}</span>
 
-  <span class="spacer"></span>
-
-  <nav>
-    @for (item of navItems; track item.name) {
-    <button type="button" mat-button [routerLink]="item.routerLink">
-      {{ item.name }}
-    </button>
-    }
-  </nav>
-</mat-toolbar>
+    <nav>
+      @for (item of navItems; track item.name) {
+      <button type="button" mat-button [routerLink]="item.routerLink">
+        {{ item.name }}
+      </button>
+      }
+    </nav>
+  </mat-toolbar>
+</header>
 
 <main>
   <router-outlet />

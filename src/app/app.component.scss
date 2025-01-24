@@ -4,15 +4,24 @@
   flex-direction: column;
 }
 
-.spacer {
-  flex: 1 1 0;
-}
+header {
+  .toolbar {
+    flex: 0 0 auto;
+    align-items: center;
+    justify-content: space-between;
 
-nav {
-  display: flex;
-  gap: 4px;
+    .home {
+      cursor: not-allowed;
+    }
+
+    nav {
+      display: flex;
+      gap: 4px;
+    }
+  }
 }
 
 main {
   flex: 1;
+  overflow: auto;
 }

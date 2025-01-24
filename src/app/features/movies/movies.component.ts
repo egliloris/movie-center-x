@@ -10,17 +10,27 @@ import {
   MatBottomSheet,
   MatBottomSheetModule,
 } from '@angular/material/bottom-sheet';
+import { MatButtonModule } from '@angular/material/button';
 import { Store } from '@ngrx/store';
 import { filter, Subject, switchMap, takeUntil } from 'rxjs';
 import { MovieBottomSheetComponent } from './components/movie-bottom-sheet/movie-bottom-sheet.component';
 import { MovieListComponent } from './components/movie-list/movie-list.component';
 import { Movie } from './movies.models';
 import * as MoviesActions from './store/movies.actions';
-import { selectMovies, selectSelectedMovie } from './store/movies.selectors';
+import {
+  selectMovies,
+  selectMovieVoteAverage,
+  selectSelectedMovie,
+} from './store/movies.selectors';
 
 @Component({
   selector: 'app-movies',
-  imports: [AsyncPipe, MovieListComponent, MatBottomSheetModule],
+  imports: [
+    AsyncPipe,
+    MovieListComponent,
+    MatBottomSheetModule,
+    MatButtonModule,
+  ],
   templateUrl: './movies.component.html',
   styleUrl: './movies.component.scss',
   changeDetection: ChangeDetectionStrategy.OnPush,
@@ -33,6 +43,10 @@ export class MoviesComponent implements OnInit, OnDestroy {
 
   protected readonly movies$ = this.store.select(selectMovies);
   protected readonly movie$ = this.store.select(selectSelectedMovie);
+
+  protected readonly randomMovieVoteAverage$ = this.store.select(
+    selectMovieVoteAverage(1184918)
+  );
 
   ngOnInit(): void {
     this.store.dispatch(MoviesActions.loadMovies());

@@ -6,14 +6,21 @@ import {
   Input,
   Output,
 } from '@angular/core';
+import { MatBadgeModule } from '@angular/material/badge';
 import { MatButtonModule } from '@angular/material/button';
 import { MatCardModule } from '@angular/material/card';
-import { MatTooltipModule } from '@angular/material/tooltip';
+import { MatIconModule } from '@angular/material/icon';
 import { Movie } from '../../movies.models';
 
 @Component({
   selector: 'app-movie-item',
-  imports: [DatePipe, MatCardModule, MatButtonModule, MatTooltipModule],
+  imports: [
+    DatePipe,
+    MatCardModule,
+    MatButtonModule,
+    MatBadgeModule,
+    MatIconModule,
+  ],
   templateUrl: './movie-item.component.html',
   styleUrl: './movie-item.component.scss',
   changeDetection: ChangeDetectionStrategy.OnPush,

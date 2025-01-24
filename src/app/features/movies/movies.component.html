@@ -1,4 +1,11 @@
-<h1>Movies</h1>
+<div class="title">
+  <h1>Movies</h1>
+
+  <span>
+    Random Movies Vote Average: {{ randomMovieVoteAverage$ | async }}
+  </span>
+</div>
+
 
 <app-movie-list [movies]="movies$ | async" (detailsClick)="selectMovie($event)"
   (voteClick)="increaseVote($event)"></app-movie-list>
