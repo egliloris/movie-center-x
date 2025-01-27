@@ -23,58 +23,58 @@ import {
 } from './store/movies.selectors';
 
 @Component({
-    selector: 'app-movies',
-    imports: [AsyncPipe, MovieListComponent, MatBottomSheetModule],
-    templateUrl: './movies.component.html',
-    styleUrl: './movies.component.scss',
-    changeDetection: ChangeDetectionStrategy.OnPush,
+  selector: 'app-movies',
+  imports: [AsyncPipe, MovieListComponent, MatBottomSheetModule],
+  templateUrl: './movies.component.html',
+  styleUrl: './movies.component.scss',
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class MoviesComponent implements OnInit, OnDestroy {
-    private readonly destroy$ = new Subject<void>();
+  private readonly destroy$ = new Subject<void>();
 
-    private readonly store: Store = inject(Store);
-    private readonly bottomSheet: MatBottomSheet = inject(MatBottomSheet);
+  private readonly store: Store = inject(Store);
+  private readonly bottomSheet: MatBottomSheet = inject(MatBottomSheet);
 
-    protected readonly movies$ = this.store.select(selectMovies);
-    protected readonly movie$ = this.store.select(selectSelectedMovie);
+  protected readonly movies$ = this.store.select(selectMovies);
+  protected readonly movie$ = this.store.select(selectSelectedMovie);
 
-    protected readonly randomMovieVoteAverage$ = this.store.select(
-        selectMovieVoteAverage(1184918)
-    );
+  protected readonly randomMovieVoteAverage$ = this.store.select(
+    selectMovieVoteAverage(1184918)
+  );
 
-    ngOnInit(): void {
-        this.store.dispatch(MoviesActions.loadMovies());
+  ngOnInit(): void {
+    this.store.dispatch(MoviesActions.loadMovies());
 
-        this.handleMovieSelection();
-    }
+    this.handleMovieSelection();
+  }
 
-    ngOnDestroy(): void {
-        this.destroy$.next();
-        this.destroy$.complete();
-    }
+  ngOnDestroy(): void {
+    this.destroy$.next();
+    this.destroy$.complete();
+  }
 
-    protected selectMovie(id: number): void {
-        this.store.dispatch(MoviesActions.setSelectedId({ selectedId: id }));
-    }
+  protected selectMovie(id: number): void {
+    this.store.dispatch(MoviesActions.setSelectedId({ selectedId: id }));
+  }
 
-    // eslint-disable-next-line @typescript-eslint/no-unused-vars
-    protected increaseVote(id: number): void {
-        // TODO: Trigger a vote increase within the store.
-    }
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
+  protected increaseVote(id: number): void {
+    // TODO: Trigger a vote increase within the store.
+  }
 
-    private handleMovieSelection() {
-        this.movie$
-            .pipe(
-                takeUntil(this.destroy$),
-                filter((movie: Movie | undefined): movie is Movie => !!movie),
-                switchMap((movie: Movie) => {
-                    return this.bottomSheet
-                        .open(MovieBottomSheetComponent, { data: movie })
-                        .afterDismissed();
-                })
-            )
-            .subscribe(() => {
-                this.store.dispatch(MoviesActions.clearSelectedId());
-            });
-    }
+  private handleMovieSelection() {
+    this.movie$
+      .pipe(
+        takeUntil(this.destroy$),
+        filter((movie: Movie | undefined): movie is Movie => !!movie),
+        switchMap((movie: Movie) => {
+          return this.bottomSheet
+            .open(MovieBottomSheetComponent, { data: movie })
+            .afterDismissed();
+        })
+      )
+      .subscribe(() => {
+        this.store.dispatch(MoviesActions.clearSelectedId());
+      });
+  }
 }
