@@ -2,7 +2,7 @@ import { createFeatureSelector, createSelector } from '@ngrx/store';
 import { Movie } from '../movies.models';
 import { MOVIES_STATE, MoviesState } from './movies.state';
 
-export const selectMoviesState = createFeatureSelector<MoviesState>(MOVIES_STATE);
+const selectMoviesState = createFeatureSelector<MoviesState>(MOVIES_STATE);
 
 export const selectMovies = createSelector(selectMoviesState, (state: MoviesState): Movie[] => state.entities);
 

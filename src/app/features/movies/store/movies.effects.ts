@@ -15,9 +15,7 @@ export class MoviesEffects {
       ofType(MoviesActions.loadMovies),
       exhaustMap(() =>
         this.service.get$().pipe(
-          map((entities: Movie[]) => {
-            return MoviesActions.loadMoviesSuccess({ entities });
-          }),
+          map((entities: Movie[]) => MoviesActions.loadMoviesSuccess({ entities })),
           catchError(() => of(MoviesActions.loadMoviesFailure()))
         )
       )

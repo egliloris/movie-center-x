@@ -4,15 +4,9 @@ import { initialState } from './movies.state';
 
 export const moviesReducer = createReducer(
   initialState,
-  on(Actions.setSelectedId, (state, { selectedId }) => ({
-    ...state,
-    selectedId,
-  })),
+  on(Actions.setSelectedId, (state, { selectedId }) => ({ ...state, selectedId })),
   on(Actions.clearSelectedId, state => ({ ...state, selectedId: undefined })),
-  on(Actions.loadMoviesSuccess, (state, { entities }) => ({
-    ...state,
-    entities,
-  })),
+  on(Actions.loadMoviesSuccess, (state, { entities }) => ({ ...state, entities })),
   on(Actions.loadMoviesFailure, state => ({ ...state, entities: [] }))
   // TODO: Add the vote increment reducer.
   // You may use the updateMovieVoteCount function from movies.helpers.ts
