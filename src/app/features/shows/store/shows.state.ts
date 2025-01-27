@@ -1,13 +1,13 @@
 import { Show } from '../shows.models';
 
-export const SHOWS_STATE = 'shows-state';
+export const SHOWS_STATE = 'shows';
 
 export interface ShowsState {
   selectedId: number | undefined;
-  shows: Show[];
+  entities: Show[];
 }
 
 export const initialState: ShowsState = {
   selectedId: undefined,
-  shows: [],
+  entities: [],
 };

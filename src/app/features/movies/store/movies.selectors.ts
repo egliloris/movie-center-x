@@ -7,17 +7,17 @@ export const selectMoviesState =
 
 export const selectMovies = createSelector(
   selectMoviesState,
-  (state: MoviesState): Movie[] => state.movies
+  (state: MoviesState): Movie[] => state.entities
 );
 
 export const selectSelectedMovie = createSelector(
   selectMoviesState,
-  ({ selectedId, movies }: MoviesState): Movie | undefined =>
-    selectedId ? movies.find(movie => movie.id === selectedId) : undefined
+  ({ selectedId, entities }: MoviesState): Movie | undefined =>
+    selectedId ? entities.find(entity => entity.id === selectedId) : undefined
 );
 
 export const selectMovieVoteAverage = (id: number) =>
-  createSelector(selectMovies, (movies: Movie[]): number => {
-    const movie = movies.find((movie: Movie) => movie.id === id);
-    return movie?.voteAverage || 0;
+  createSelector(selectMovies, (entities: Movie[]): number => {
+    const entity = entities.find((movie: Movie) => movie.id === id);
+    return entity?.voteAverage || 0;
   });

@@ -13,6 +13,6 @@ export const clearSelectedId = createAction('[Movies] clear selected id');
 export const loadMovies = createAction('[Movies] load');
 export const loadMoviesSuccess = createAction(
   '[Movies] load success',
-  props<{ movies: Movie[] }>()
+  props<{ entities: Movie[] }>()
 );
 export const loadMoviesFailure = createAction('[Movies] load failure');
