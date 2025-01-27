@@ -6,6 +6,8 @@
   </span>
 </div>
 
-
-<app-movie-list [movies]="movies$ | async" (detailsClick)="selectMovie($event)"
-  (voteClick)="increaseVote($event)"></app-movie-list>
+<app-movie-list
+  [movies]="movies$ | async"
+  (detailsClick)="selectMovie($event)"
+  (voteClick)="increaseVote($event)">
+</app-movie-list>

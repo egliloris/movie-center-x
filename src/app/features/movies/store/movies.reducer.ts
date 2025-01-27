@@ -1,18 +1,6 @@
 import { createReducer, on } from '@ngrx/store';
-import { Movie } from '../movies.models';
 import * as Actions from './movies.actions';
-
-export const MOVIES_STATE = 'movies-state';
-
-export interface MoviesState {
-  selectedId: number | undefined;
-  movies: Movie[];
-}
-
-export const initialState: MoviesState = {
-  selectedId: undefined,
-  movies: [],
-};
+import { initialState } from './movies.state';
 
 export const moviesReducer = createReducer(
   initialState,

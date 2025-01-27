@@ -11,16 +11,13 @@ import { provideStore } from '@ngrx/store';
 import { provideStoreDevtools } from '@ngrx/store-devtools';
 import { routes } from './app.routes';
 import { MoviesEffects } from './features/movies/store/movies.effects';
-import {
-  MOVIES_STATE,
-  moviesReducer,
-} from './features/movies/store/movies.reducer';
+import { moviesReducer } from './features/movies/store/movies.reducer';
+import { MOVIES_STATE } from './features/movies/store/movies.state';
 import { ShowsEffects } from './features/shows/store/shows.effects';
-import {
-  SHOWS_STATE,
-  showsReducer,
-} from './features/shows/store/shows.reducer';
-import { GLOBAL_STATE, globalReducer } from './store/global.reducer';
+import { showsReducer } from './features/shows/store/shows.reducer';
+import { SHOWS_STATE } from './features/shows/store/shows.state';
+import { globalReducer } from './store/global.reducer';
+import { GLOBAL_STATE } from './store/global.state';
 
 export const appConfig: ApplicationConfig = {
   providers: [

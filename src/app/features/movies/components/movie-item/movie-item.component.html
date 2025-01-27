@@ -9,10 +9,10 @@
   </mat-card-header>
 
   <img
-    class="movie-cover"
     mat-card-image
-    [src]="movie.backdropPath"
-    alt="Movie Cover." />
+    class="movie-cover"
+    alt="Movie Cover."
+    [src]="movie.backdropPath" />
 
   <mat-card-content>
     <p>{{ movie.overview }}</p>
@@ -25,6 +25,7 @@
       (click)="voteClick.emit(movie.id)">
       LIKE
     </button>
+
     <button mat-button (click)="detailsClick.emit(movie.id)">DETAILS</button>
   </mat-card-actions>
 </mat-card>
