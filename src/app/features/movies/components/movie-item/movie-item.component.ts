@@ -1,11 +1,5 @@
 import { DatePipe } from '@angular/common';
-import {
-  ChangeDetectionStrategy,
-  Component,
-  EventEmitter,
-  Input,
-  Output,
-} from '@angular/core';
+import { ChangeDetectionStrategy, Component, EventEmitter, Input, Output } from '@angular/core';
 import { MatBadgeModule } from '@angular/material/badge';
 import { MatButtonModule } from '@angular/material/button';
 import { MatCardModule } from '@angular/material/card';
@@ -14,13 +8,7 @@ import { Movie } from '../../movies.models';
 
 @Component({
   selector: 'app-movie-item',
-  imports: [
-    DatePipe,
-    MatCardModule,
-    MatButtonModule,
-    MatBadgeModule,
-    MatIconModule,
-  ],
+  imports: [DatePipe, MatCardModule, MatButtonModule, MatBadgeModule, MatIconModule],
   templateUrl: './movie-item.component.html',
   styleUrl: './movie-item.component.scss',
   changeDetection: ChangeDetectionStrategy.OnPush,

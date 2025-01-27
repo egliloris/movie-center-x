@@ -1,26 +1,13 @@
 import { AsyncPipe } from '@angular/common';
-import {
-  ChangeDetectionStrategy,
-  Component,
-  inject,
-  OnDestroy,
-  OnInit,
-} from '@angular/core';
-import {
-  MatBottomSheet,
-  MatBottomSheetModule,
-} from '@angular/material/bottom-sheet';
+import { ChangeDetectionStrategy, Component, inject, OnDestroy, OnInit } from '@angular/core';
+import { MatBottomSheet, MatBottomSheetModule } from '@angular/material/bottom-sheet';
 import { Store } from '@ngrx/store';
 import { filter, Subject, switchMap, takeUntil } from 'rxjs';
 import { MovieBottomSheetComponent } from './components/movie-bottom-sheet/movie-bottom-sheet.component';
 import { MovieListComponent } from './components/movie-list/movie-list.component';
 import { Movie } from './movies.models';
 import * as MoviesActions from './store/movies.actions';
-import {
-  selectMovies,
-  selectMovieVoteAverage,
-  selectSelectedMovie,
-} from './store/movies.selectors';
+import { selectMovies, selectMovieVoteAverage, selectSelectedMovie } from './store/movies.selectors';
 
 @Component({
   selector: 'app-movies',
@@ -38,9 +25,7 @@ export class MoviesComponent implements OnInit, OnDestroy {
   protected readonly movies$ = this.store.select(selectMovies);
   protected readonly movie$ = this.store.select(selectSelectedMovie);
 
-  protected readonly randomMovieVoteAverage$ = this.store.select(
-    selectMovieVoteAverage(1184918)
-  );
+  protected readonly randomMovieVoteAverage$ = this.store.select(selectMovieVoteAverage(1184918));
 
   ngOnInit(): void {
     this.store.dispatch(MoviesActions.loadMovies());
@@ -68,9 +53,7 @@ export class MoviesComponent implements OnInit, OnDestroy {
         takeUntil(this.destroy$),
         filter((movie: Movie | undefined): movie is Movie => !!movie),
         switchMap((movie: Movie) => {
-          return this.bottomSheet
-            .open(MovieBottomSheetComponent, { data: movie })
-            .afterDismissed();
+          return this.bottomSheet.open(MovieBottomSheetComponent, { data: movie }).afterDismissed();
         })
       )
       .subscribe(() => {
