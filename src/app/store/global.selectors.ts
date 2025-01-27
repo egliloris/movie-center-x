@@ -1,5 +1,5 @@
 import { createFeatureSelector, createSelector } from '@ngrx/store';
-import { GLOBAL_STATE, GlobalState } from './global.reducer';
+import { GLOBAL_STATE, GlobalState } from './global.state';
 
 export const globalSelector = createFeatureSelector<GlobalState>(GLOBAL_STATE);
 
