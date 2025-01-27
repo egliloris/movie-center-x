@@ -20,12 +20,12 @@ export const moviesReducer = createReducer(
     ...state,
     selectedId,
   })),
-  on(Actions.clearSelectedId, (state) => ({ ...state, selectedId: undefined })),
+  on(Actions.clearSelectedId, state => ({ ...state, selectedId: undefined })),
   on(Actions.loadMoviesSuccess, (state, { movies }) => ({
     ...state,
     movies: movies,
   })),
-  on(Actions.loadMoviesFailure, (state) => ({ ...state, movies: [] }))
+  on(Actions.loadMoviesFailure, state => ({ ...state, movies: [] }))
   // TODO: Add the vote increment reducer.
   // You may use the updateMovieVoteCount function from movies.helpers.ts
 );

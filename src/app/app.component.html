@@ -4,9 +4,9 @@
 
     <nav>
       @for (item of navItems; track item.name) {
-      <button type="button" mat-button [routerLink]="item.routerLink">
-        {{ item.name }}
-      </button>
+        <button type="button" mat-button [routerLink]="item.routerLink">
+          {{ item.name }}
+        </button>
       }
     </nav>
   </mat-toolbar>

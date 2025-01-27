@@ -8,7 +8,10 @@ import { selectTitle } from './store/global.selectors';
 
 const materialModules = [MatButtonModule, MatToolbarModule];
 
-type NavItem = { name: string; routerLink: string };
+interface NavItem {
+  name: string;
+  routerLink: string;
+}
 
 @Component({
   selector: 'app-root',

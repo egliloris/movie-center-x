@@ -13,7 +13,7 @@ export const selectMovies = createSelector(
 export const selectSelectedMovie = createSelector(
   selectMoviesState,
   ({ selectedId, movies }: MoviesState): Movie | undefined =>
-    selectedId ? movies.find((movie) => movie.id === selectedId) : undefined
+    selectedId ? movies.find(movie => movie.id === selectedId) : undefined
 );
 
 export const selectMovieVoteAverage = (id: number) =>
