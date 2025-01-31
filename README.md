@@ -1,11 +1,18 @@
 # MovieCenterX
 
-This project is a template to learn [NgRx](https://ngrx.io/)
+This project is a template to learn [NgRx](https://ngrx.io/).
 
 ## Setup
 
 - Run `npm install`
+- Run `npm run start`
 - Install Redux DevTools
+
+To start a local development server, run `ng serve`.
+
+Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+
+## Your Tasks
 
 ### Basics - Movies
 
@@ -19,16 +26,17 @@ Try to implement the [Shows](http://localhost:4200/shows) tab on your own. The b
 
 Here is a small checklist which might help you on your way:
 
-- [ ] Load actions implemented.
-- [ ] Load effect implemented.
-- [ ] Load success and failure reducer implemented.
-- [ ] Load on init dispatched.
-- [ ] Select all selector implemented.
+- [ ] Check if everything that is needed is in the state.
+- [ ] Implement actions.
+- [ ] Implement reducers.
+- [ ] Implement selectors.
+- [ ] Implement effects.
+- [ ] Implement smart and dumb components.
 
 What else can you try?
 
 - [ ] Set a selected show within the state and load given show.
-- [ ] Add a loading and loaded phase to the reducer
+- [ ] Add a loading and loaded state to the reducer. Try to only use a single action for this.
 - [ ] Convert the `shows` array into a dictionary `{ [id: string]: Show }` and improve the selector for the selected show.
 
 ### Final - Actors
@@ -37,21 +45,13 @@ Repeat the same for actors but be aware, nothing has been done yet.
 
 Here is a small checklist which might help you on your way:
 
-- [ ] Die you add all relevant files? (`*.actions.ts | *.effects.ts | *.reducer.ts | *.selectors.ts`)
+- [ ] Did you add all relevant files?
 - [ ] Did you provide the new state to the application?
-- [ ] Die you provide the effects to the application?
+- [ ] Did you provide the effects to the application?
 - [ ] Have you added an useful initial state?
 
 What else can you try?
 
+- [ ] Create a new page that lists all movies and shows combined. Implement a selector that combines and returns state from different store areas.
+- [ ] Change the Actors feature into a lazy-loaded feature. (You need to change the routes and the Store registration.)
 - [ ] Open a bottom sheet or dialog using effects only.
-
-## Development server
-
-To start a local development server, run:
-
-```bash
-ng serve
-```
-
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
