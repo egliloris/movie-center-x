@@ -42,6 +42,7 @@ What else can you try (optional)?
 
 - [ ] Set a selected show within the state and load given show.
 - [ ] Add a loading and loaded state to the reducer. Try to only use a single action for this.
+- [ ] Load movies from the API only if they have not yet been loaded.
 - [ ] Convert the `shows` array into a dictionary `{ [id: string]: Show }` and improve the selector for the selected show.
 
 ### Final - Actors
