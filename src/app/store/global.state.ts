@@ -1,4 +1,4 @@
-export const GLOBAL_STATE = 'global';
+export const STORE_KEY = 'global';
 
 export interface GlobalState {
   title: string;

@@ -1,6 +1,6 @@
-import { Movie } from '../movies.models';
+import { Movie } from '../models/movies.models';
 
-export const MOVIES_STATE = 'movies';
+export const FEATURE_KEY_MOVIES = 'movies';
 
 export interface MoviesState {
   selectedId: number | undefined;

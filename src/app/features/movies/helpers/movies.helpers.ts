@@ -1,4 +1,4 @@
-import { Movie } from './movies.models';
+import { Movie } from '../models/movies.models';
 
 export const updateMovieVoteCount = (movies: Movie[], id: number): Movie[] => {
   return movies.map((movie: Movie): Movie => {

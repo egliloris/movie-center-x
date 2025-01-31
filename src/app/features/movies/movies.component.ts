@@ -5,13 +5,15 @@ import { Store } from '@ngrx/store';
 import { filter, Subject, switchMap, takeUntil } from 'rxjs';
 import { MovieBottomSheetComponent } from './components/movie-bottom-sheet/movie-bottom-sheet.component';
 import { MovieListComponent } from './components/movie-list/movie-list.component';
-import { Movie } from './movies.models';
+import { Movie } from './models/movies.models';
+import { MoviesService } from './services/movies.service';
 import * as MoviesActions from './store/movies.actions';
 import { selectMovies, selectMovieVoteAverage, selectSelectedMovie } from './store/movies.selectors';
 
 @Component({
   selector: 'app-movies',
   imports: [AsyncPipe, MovieListComponent, MatBottomSheetModule],
+  providers: [MoviesService],
   templateUrl: './movies.component.html',
   styleUrl: './movies.component.scss',
   changeDetection: ChangeDetectionStrategy.OnPush,

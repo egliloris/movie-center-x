@@ -1,6 +1,6 @@
-import { Show } from '../shows.models';
+import { Show } from '../models/shows.models';
 
-export const SHOWS_STATE = 'shows';
+export const FEATURE_KEY_SHOWS = 'shows';
 
 export interface ShowsState {
   selectedId: number | undefined;

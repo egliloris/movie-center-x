@@ -9,5 +9,5 @@ export const moviesReducer = createReducer(
   on(Actions.loadMoviesSuccess, (state, { entities }) => ({ ...state, entities })),
   on(Actions.loadMoviesFailure, state => ({ ...state, entities: [] }))
   // TODO: Add the vote increment reducer.
-  // You may use the updateMovieVoteCount function from movies.helpers.ts
+  // You may use the updateMovieVoteCount function from ./helpers/movies.helpers.ts
 );

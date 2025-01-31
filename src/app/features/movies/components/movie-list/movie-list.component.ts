@@ -1,5 +1,5 @@
 import { ChangeDetectionStrategy, Component, EventEmitter, Input, Output } from '@angular/core';
-import { Movie } from '../../movies.models';
+import { Movie } from '../../models/movies.models';
 import { MovieItemComponent } from '../movie-item/movie-item.component';
 
 @Component({

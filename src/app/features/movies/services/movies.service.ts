@@ -1,11 +1,11 @@
 import { HttpClient } from '@angular/common/http';
 import { inject, Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
-import { Movie } from './movies.models';
+import { Movie } from '../models/movies.models';
 
 const MOVIES_URI = '/data/movies.json';
 
-@Injectable({ providedIn: 'root' })
+@Injectable()
 export class MoviesService {
   private readonly http: HttpClient = inject(HttpClient);
 

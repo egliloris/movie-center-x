@@ -1,5 +1,5 @@
 import { createAction, props } from '@ngrx/store';
-import { Movie } from '../movies.models';
+import { Movie } from '../models/movies.models';
 
 export const setSelectedId = createAction('[Movies] set selected id', props<{ selectedId: number }>());
 

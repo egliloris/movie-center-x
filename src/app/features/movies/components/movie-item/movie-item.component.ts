@@ -4,7 +4,7 @@ import { MatBadgeModule } from '@angular/material/badge';
 import { MatButtonModule } from '@angular/material/button';
 import { MatCardModule } from '@angular/material/card';
 import { MatIconModule } from '@angular/material/icon';
-import { Movie } from '../../movies.models';
+import { Movie } from '../../models/movies.models';
 
 @Component({
   selector: 'app-movie-item',

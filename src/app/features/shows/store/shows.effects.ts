@@ -1,6 +1,6 @@
 import { inject, Injectable } from '@angular/core';
 import { Actions } from '@ngrx/effects';
-import { ShowsService } from '../shows.service';
+import { ShowsService } from '../services/shows.service';
 
 @Injectable()
 export class ShowsEffects {

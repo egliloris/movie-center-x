@@ -1,8 +1,9 @@
 import { ChangeDetectionStrategy, Component } from '@angular/core';
+import { ActorsService } from './services/actors.service';
 
 @Component({
   selector: 'app-actors',
-  imports: [],
+  providers: [ActorsService],
   templateUrl: './actors.component.html',
   styleUrl: './actors.component.scss',
   changeDetection: ChangeDetectionStrategy.OnPush,

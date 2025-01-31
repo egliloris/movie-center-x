@@ -1,8 +1,8 @@
 import { inject, Injectable } from '@angular/core';
 import { Actions, createEffect, ofType } from '@ngrx/effects';
 import { catchError, exhaustMap, map, of } from 'rxjs';
-import { Movie } from '../movies.models';
-import { MoviesService } from '../movies.service';
+import { Movie } from '../models/movies.models';
+import { MoviesService } from '../services/movies.service';
 import * as MoviesActions from './movies.actions';
 
 @Injectable()

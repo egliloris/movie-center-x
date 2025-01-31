@@ -1,11 +1,11 @@
 import { HttpClient } from '@angular/common/http';
 import { inject, Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
-import { Actor } from './actors.models';
+import { Actor } from '../models/actor.models';
 
 const ACTORS_URI = '/data/actors.json';
 
-@Injectable({ providedIn: 'root' })
+@Injectable()
 export class ActorsService {
   private readonly http: HttpClient = inject(HttpClient);
 
