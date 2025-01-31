@@ -7,8 +7,6 @@ This project is a template to learn [NgRx](https://ngrx.io/)
 - Run `npm install`
 - Install Redux DevTools
 
-## TODO's
-
 ### Basics - Movies
 
 - [ ] Run the application and inspect the redux dev tools.
