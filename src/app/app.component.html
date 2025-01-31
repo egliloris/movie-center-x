@@ -4,7 +4,7 @@
 
     <nav>
       @for (item of navItems; track item.name) {
-        <button type="button" mat-button [routerLink]="item.routerLink">
+        <button type="button" mat-button routerLinkActive="active" [routerLink]="item.routerLink">
           {{ item.name }}
         </button>
       }

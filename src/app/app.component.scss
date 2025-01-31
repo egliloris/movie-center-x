@@ -1,3 +1,5 @@
+@use '@angular/material' as mat;
+
 :host {
   height: 100%;
   display: flex;
@@ -18,6 +20,10 @@ header {
     nav {
       display: flex;
       gap: 4px;
+
+      .active {
+        background: color-mix(in srgb, var(--mat-sys-primary) 10%, transparent);
+      }
     }
   }
 }
