@@ -1,8 +1,9 @@
 import { AsyncPipe } from '@angular/common';
-import { ChangeDetectionStrategy, Component, inject, OnDestroy, OnInit } from '@angular/core';
+import { ChangeDetectionStrategy, Component, inject, OnInit } from '@angular/core';
+import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
 import { MatBottomSheet, MatBottomSheetModule } from '@angular/material/bottom-sheet';
 import { Store } from '@ngrx/store';
-import { filter, Subject, switchMap, takeUntil } from 'rxjs';
+import { filter, switchMap } from 'rxjs';
 import { MovieBottomSheetComponent } from './components/movie-bottom-sheet/movie-bottom-sheet.component';
 import { MovieListComponent } from './components/movie-list/movie-list.component';
 import { Movie } from './models/movies.models';
@@ -16,9 +17,7 @@ import { selectMovies, selectMovieVoteAverage, selectSelectedMovie } from './sto
   styleUrl: './movies.component.scss',
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class MoviesComponent implements OnInit, OnDestroy {
-  private readonly destroy$ = new Subject<void>();
-
+export class MoviesComponent implements OnInit {
   private readonly store: Store = inject(Store);
   private readonly bottomSheet: MatBottomSheet = inject(MatBottomSheet);
 
@@ -27,15 +26,12 @@ export class MoviesComponent implements OnInit, OnDestroy {
 
   protected readonly randomMovieVoteAverage$ = this.store.select(selectMovieVoteAverage(1184918));
 
-  ngOnInit(): void {
-    this.store.dispatch(MoviesActions.loadMovies());
-
+  constructor() {
     this.handleMovieSelection();
   }
 
-  ngOnDestroy(): void {
-    this.destroy$.next();
-    this.destroy$.complete();
+  ngOnInit(): void {
+    this.store.dispatch(MoviesActions.loadMovies());
   }
 
   protected selectMovie(id: number): void {
@@ -50,14 +46,10 @@ export class MoviesComponent implements OnInit, OnDestroy {
   private handleMovieSelection() {
     this.movie$
       .pipe(
-        takeUntil(this.destroy$),
         filter((movie: Movie | undefined): movie is Movie => !!movie),
-        switchMap((movie: Movie) => {
-          return this.bottomSheet.open(MovieBottomSheetComponent, { data: movie }).afterDismissed();
-        })
+        switchMap((movie: Movie) => this.bottomSheet.open(MovieBottomSheetComponent, { data: movie }).afterDismissed()),
+        takeUntilDestroyed()
       )
-      .subscribe(() => {
-        this.store.dispatch(MoviesActions.clearSelectedId());
-      });
+      .subscribe(() => this.store.dispatch(MoviesActions.clearSelectedId()));
   }
 }
