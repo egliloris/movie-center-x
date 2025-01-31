@@ -1,6 +1,6 @@
 <header>
-  <mat-toolbar color="primary" class="toolbar">
-    <span class="home" routerLink="/">{{ title$ | async }}</span>
+  <mat-toolbar class="toolbar">
+    <code class="home" routerLink="/">{{ title$ | async }}</code>
 
     <nav>
       @for (item of navItems; track item.name) {

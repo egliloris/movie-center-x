@@ -1,3 +1,5 @@
+@use '@angular/material' as mat;
+
 html,
 body {
   height: 100%;
@@ -5,5 +7,19 @@ body {
 
 body {
   margin: 0;
-  font-family: Roboto, "Helvetica Neue", sans-sederif;
+  font-family: Roboto, 'Helvetica Neue', sans-sederif;
+}
+
+:root {
+  @include mat.toolbar-overrides(
+    (
+      container-background-color: var(--mat-sys-primary-container),
+    )
+  );
+
+  @include mat.card-overrides(
+    (
+      elevated-container-color: color-mix(in srgb, var(--mat-sys-primary-container) 50%, transparent),
+    )
+  );
 }
