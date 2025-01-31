@@ -8,6 +8,11 @@
           {{ item.name }}
         </button>
       }
+
+      <button type="button" mat-button matTooltip="User Profile Not Implemented.">
+        <mat-icon>supervised_user_circle</mat-icon>
+        {{ userName$ | async }}
+      </button>
     </nav>
   </mat-toolbar>
 </header>

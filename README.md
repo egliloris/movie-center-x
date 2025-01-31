@@ -17,8 +17,13 @@ Once the server is running, open your browser and navigate to `http://localhost:
 ### Basics - Movies
 
 - [ ] Run the application and inspect the redux dev tools.
-- [ ] Checkout the [Movies](http://localhost:4200/movies) tab. Whats the difference between viewing the movies details vs. the random vote average display.
-- [ ] Implement the like button to increase the movie vote count.
+- [ ] Checkout the [Movies](http://localhost:4200/movies) tab and inspect the redux dev tools to answer the following questions:
+  - When is the movie state initialized? What are the default values?
+  - When and how are movies loaded?
+  - Whats the difference between viewing the movies `DETAILS` vs. `Random Movie Vote Average` display.
+  - Is clearing the selected id required after the bottom sheet has been closed? Why or why not?
+- [ ] Implement the `LIKE` button to increase the movie vote count.
+- [ ] Display the users favorite movie on the movies page.
 
 ### Advanced - Shows
 
@@ -33,7 +38,7 @@ Here is a small checklist which might help you on your way:
 - [ ] Implement effects.
 - [ ] Implement smart and dumb components.
 
-What else can you try?
+What else can you try (optional)?
 
 - [ ] Set a selected show within the state and load given show.
 - [ ] Add a loading and loaded state to the reducer. Try to only use a single action for this.
@@ -41,7 +46,7 @@ What else can you try?
 
 ### Final - Actors
 
-Repeat the same for actors but be aware, nothing has been done yet.
+Repeat the same for actors but be aware, nothing has been done yet! 🤷‍♂️
 
 Here is a small checklist which might help you on your way:
 
@@ -52,6 +57,5 @@ Here is a small checklist which might help you on your way:
 
 What else can you try?
 
-- [ ] Create a new page that lists all movies and shows combined. Implement a selector that combines and returns state from different store areas.
 - [ ] Change the Actors feature into a lazy-loaded feature. (You need to change the routes and the Store registration.)
 - [ ] Open a bottom sheet or dialog using effects only.
