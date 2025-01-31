@@ -57,5 +57,5 @@ Here is a small checklist which might help you on your way:
 
 What else can you try?
 
-- [ ] Change the Actors feature into a lazy-loaded feature. (You need to change the routes and the Store registration.)
+- [ ] Change all features into lazy-loaded features. (You need to change the routes and the Store registration.)
 - [ ] Open a bottom sheet or dialog using effects only.
