@@ -5,7 +5,7 @@ import { Movie } from '../models/movies.models';
 
 const MOVIES_URI = '/data/movies.json';
 
-@Injectable()
+@Injectable({ providedIn: 'root' })
 export class MoviesService {
   private readonly http: HttpClient = inject(HttpClient);
 

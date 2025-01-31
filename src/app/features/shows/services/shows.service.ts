@@ -5,7 +5,7 @@ import { Show } from '../models/shows.models';
 
 const SHOWS_URI = '/data/shows.json';
 
-@Injectable()
+@Injectable({ providedIn: 'root' })
 export class ShowsService {
   private readonly http: HttpClient = inject(HttpClient);
 

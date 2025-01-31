@@ -5,7 +5,7 @@ import { Actor } from '../models/actor.models';
 
 const ACTORS_URI = '/data/actors.json';
 
-@Injectable()
+@Injectable({ providedIn: 'root' })
 export class ActorsService {
   private readonly http: HttpClient = inject(HttpClient);
 

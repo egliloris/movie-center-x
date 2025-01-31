@@ -1,9 +1,7 @@
 import { ChangeDetectionStrategy, Component } from '@angular/core';
-import { ShowsService } from './services/shows.service';
 
 @Component({
   selector: 'app-shows',
-  providers: [ShowsService],
   templateUrl: './shows.component.html',
   styleUrl: './shows.component.scss',
   changeDetection: ChangeDetectionStrategy.OnPush,
