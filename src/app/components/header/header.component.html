@@ -1,0 +1,16 @@
+<mat-toolbar class="toolbar">
+  <code class="home" routerLink="/">{{ title }}</code>
+
+  <nav>
+    @for (item of navItems; track item.name) {
+      <button type="button" mat-button routerLinkActive="active" [routerLink]="item.routerLink">
+        {{ item.name }}
+      </button>
+    }
+
+    <button type="button" mat-button matTooltip="User Profile Not Implemented.">
+      <mat-icon>supervised_user_circle</mat-icon>
+      {{ userName }}
+    </button>
+  </nav>
+</mat-toolbar>

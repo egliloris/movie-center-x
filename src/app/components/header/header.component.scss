@@ -1,0 +1,17 @@
+.toolbar {
+  align-items: center;
+  justify-content: space-between;
+
+  .home {
+    cursor: not-allowed;
+  }
+
+  nav {
+    display: flex;
+    gap: 4px;
+
+    .active {
+      background: color-mix(in srgb, var(--mat-sys-primary) 10%, transparent);
+    }
+  }
+}

@@ -1,23 +1,14 @@
 import { AsyncPipe } from '@angular/common';
 import { Component, inject } from '@angular/core';
-import { MatButtonModule } from '@angular/material/button';
-import { MatIconModule } from '@angular/material/icon';
-import { MatToolbarModule } from '@angular/material/toolbar';
-import { MatTooltipModule } from '@angular/material/tooltip';
-import { RouterLink, RouterLinkActive, RouterOutlet } from '@angular/router';
+import { RouterOutlet } from '@angular/router';
 import { Store } from '@ngrx/store';
+import { HeaderComponent } from './components/header/header.component';
+import { NavItem } from './models/nav-item.model';
 import { selectTitle, selectUserName } from './store/global.selectors';
-
-const materialModules = [MatTooltipModule, MatIconModule, MatToolbarModule, MatButtonModule];
-
-interface NavItem {
-  name: string;
-  routerLink: string;
-}
 
 @Component({
   selector: 'app-root',
-  imports: [AsyncPipe, RouterOutlet, RouterLink, RouterLinkActive, materialModules],
+  imports: [AsyncPipe, RouterOutlet, HeaderComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',
 })

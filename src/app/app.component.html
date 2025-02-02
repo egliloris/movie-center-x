@@ -1,21 +1,4 @@
-<header>
-  <mat-toolbar class="toolbar">
-    <code class="home" routerLink="/">{{ title$ | async }}</code>
-
-    <nav>
-      @for (item of navItems; track item.name) {
-        <button type="button" mat-button routerLinkActive="active" [routerLink]="item.routerLink">
-          {{ item.name }}
-        </button>
-      }
-
-      <button type="button" mat-button matTooltip="User Profile Not Implemented.">
-        <mat-icon>supervised_user_circle</mat-icon>
-        {{ userName$ | async }}
-      </button>
-    </nav>
-  </mat-toolbar>
-</header>
+<app-header [title]="title$ | async" [userName]="userName$ | async" [navItems]="navItems" />
 
 <main>
   <router-outlet />
