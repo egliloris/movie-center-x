@@ -1,7 +1,9 @@
 import { config, configs as tseslintConfig } from 'typescript-eslint';
-import { configs as eslintConfig } from '@eslint/js';
 import { configs as angularConfig, processInlineTemplates } from 'angular-eslint';
 import eslintPluginPrettierRecommended from 'eslint-plugin-prettier/recommended';
+import eslint from '@eslint/js';
+
+const { configs: eslintConfig } = eslint;
 
 export default config(
   {
