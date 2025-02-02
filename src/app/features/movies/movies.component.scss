@@ -1,10 +1,5 @@
 :host {
-  display: block;
   padding: 32px;
-}
-
-.title {
   display: flex;
-  align-items: center;
-  justify-content: space-between;
+  flex-direction: column;
 }

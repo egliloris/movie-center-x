@@ -6,13 +6,14 @@ import { Store } from '@ngrx/store';
 import { filter, switchMap } from 'rxjs';
 import { MovieBottomSheetComponent } from './components/movie-bottom-sheet/movie-bottom-sheet.component';
 import { MovieListComponent } from './components/movie-list/movie-list.component';
+import { MoviesHeaderComponent } from './components/movies-header/movies-header.component';
 import { Movie } from './models/movies.models';
 import * as MoviesActions from './store/movies.actions';
 import { selectMovies, selectMovieVoteAverage, selectSelectedMovie } from './store/movies.selectors';
 
 @Component({
   selector: 'app-movies',
-  imports: [AsyncPipe, MovieListComponent, MatBottomSheetModule],
+  imports: [AsyncPipe, MoviesHeaderComponent, MovieListComponent, MatBottomSheetModule],
   templateUrl: './movies.component.html',
   styleUrl: './movies.component.scss',
   changeDetection: ChangeDetectionStrategy.OnPush,
@@ -21,9 +22,9 @@ export class MoviesComponent implements OnInit {
   private readonly store: Store = inject(Store);
   private readonly bottomSheet: MatBottomSheet = inject(MatBottomSheet);
 
-  protected readonly movies$ = this.store.select(selectMovies);
-  protected readonly movie$ = this.store.select(selectSelectedMovie);
+  private readonly movie$ = this.store.select(selectSelectedMovie);
 
+  protected readonly movies$ = this.store.select(selectMovies);
   protected readonly randomMovieVoteAverage$ = this.store.select(selectMovieVoteAverage(1184918));
 
   constructor() {
