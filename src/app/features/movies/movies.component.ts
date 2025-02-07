@@ -9,7 +9,7 @@ import { MovieListComponent } from './components/movie-list/movie-list.component
 import { MoviesHeaderComponent } from './components/movies-header/movies-header.component';
 import { Movie } from './models/movies.models';
 import * as MoviesActions from './store/movies.actions';
-import { selectMovies, selectMovieVoteAverage, selectSelectedMovie } from './store/movies.selectors';
+import { selectMostLikedMovie, selectMovies, selectMovieVoteAverage, selectSelectedMovie } from './store/movies.selectors';
 
 @Component({
   selector: 'app-movies',
@@ -25,7 +25,9 @@ export class MoviesComponent implements OnInit {
   private readonly movie$ = this.store.select(selectSelectedMovie);
 
   protected readonly movies$ = this.store.select(selectMovies);
-  protected readonly randomMovieVoteAverage$ = this.store.select(selectMovieVoteAverage(1184918));
+  protected readonly randomMovieVoteAverage$ = this.store.select(selectMovieVoteAverage(1184918));  
+  protected readonly mostLikedMovie$ = this.store.select(selectMostLikedMovie());
+
 
   constructor() {
     this.handleMovieSelection();
@@ -39,9 +41,8 @@ export class MoviesComponent implements OnInit {
     this.store.dispatch(MoviesActions.setSelectedId({ selectedId: id }));
   }
 
-  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   protected increaseVote(id: number): void {
-    // TODO: Trigger a vote increase within the store.
+    this.store.dispatch(MoviesActions.likeSelectedId({ selectedId: id }));
   }
 
   private handleMovieSelection() {

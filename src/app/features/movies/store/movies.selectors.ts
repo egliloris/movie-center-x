@@ -14,6 +14,12 @@ export const selectSelectedMovie = createSelector(
 
 export const selectMovieVoteAverage = (id: number) =>
   createSelector(selectMovies, (entities: Movie[]): number => {
-    const entity = entities.find((movie: Movie) => movie.id === id);
-    return entity?.voteAverage || 0;
+    const movie = entities.find((movie: Movie) => movie.id === id);
+    return movie?.voteAverage || 0;
   });
+
+  export const selectMostLikedMovie = () =>
+    createSelector(selectMovies, (entities: Movie[]): Movie | undefined => {
+      const mostLikedMovie = entities.reduce( (max, current) => {return (current.voteCount > max.voteCount) ? current : max;}, entities[0]);
+      return mostLikedMovie;
+    });

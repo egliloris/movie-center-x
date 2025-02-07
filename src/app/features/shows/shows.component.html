@@ -1,1 +1,2 @@
-<p><code>TODO: Implement Shows</code></p>
+<app-show-header />
+<app-show-list [shows]="shows$ | async" (detailsClick)="test($event)" (voteClick)="test($event)" />

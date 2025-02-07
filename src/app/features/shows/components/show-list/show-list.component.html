@@ -1,0 +1,3 @@
+@for (show of shows; track show.id) {
+  <app-show-item [show]="show" (detailsClick)="detailsClick.emit($event)" (voteClick)="voteClick.emit($event)" />
+}
